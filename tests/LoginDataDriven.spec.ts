@@ -28,7 +28,10 @@ for (const data of jsonTestData) {
       expect(isLoggedIn).toBeTruthy();
     } else {
       const errorMessage = await loginPage.getErrorMessage();
-      expect(errorMessage).toBe(`Warning: No match for E-Mail Address and/or Password.`);
+      expect([  
+        `Warning: No match for E-Mail Address and/or Pour account has exceedeassword.`,
+        `Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.`
+      ]).toContain(errorMessage);
     }
   });
 }

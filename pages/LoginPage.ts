@@ -12,7 +12,7 @@ export class LoginPage {
     this.txtEmailAddress = page.locator('#input-email');
     this.txtPassword = page.locator('#input-password');
     this.btnLogin = page.locator('input[type="submit"]');
-    this.txtErrorMessage = page.locator('#error-message');
+    this.txtErrorMessage = page.locator('.alert.alert-danger.alert-dismissible');
   }
 
   /**
